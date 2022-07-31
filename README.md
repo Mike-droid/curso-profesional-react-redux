@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Curso Profesional de React.js y Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Conceptos claves para empezar
 
-## Available Scripts
+### Conceptos clave de Redux
 
-In the project directory, you can run:
+Al utilizar cualquier tecnología es importante no solo saber utilizarla, sino porqué la estamos usando y entender la teoría.
 
-### `npm start`
+¿Qué es Redux? -> Es una librería que nos ayuda a manejar el estado de nuestra aplicación.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Necesitamos 3 cosas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Dónde almancenar la información
+- Cómo acceder a ella
+- Cómo actualizarla
 
-### `npm test`
+Redux está basado en 3 principios:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Hay solo una única fuente de verdad (store) => La diferencia entre State y Store es que State es un objeto de tipo 'clave: valor' (aunque puede ser de otros tipos). El Store contiene al State y a otras cosas.
+2. El estado es de solo lectura (solo se actualiza con actions). No debemos modificarlo directamente.
+3. Los cabmios deben realizarse a través de funciones puras (reducers).
 
-### `npm run build`
+*Funciones puras*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Valor retornado cambia si la entrada cambia.
+- Misma entrada, misma salida.
+- Sin efectos colaterales
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Entrada: x -> Función Pura: f -> Salida: F(x)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*Reducers*
 
-### `npm run eject`
+- Calcular el nuevo estado basado en los parámetros (state, action).
+- No modificar el estado directamente.
+- No tener lógica asíncrona.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Ciclo de vida de Redux
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Gif del ciclo de vida de Redux](https://platzi.com/comentario/3801091/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. state define UI
+2. en la UI el usuario dispara una acción
+3. la acción es mandada al reducer
+4. el reducer actualiza el store
+5. el store contiene al state
+6. volvemos al paso 1
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Diferencias entre Redux y Context
 
-## Learn More
+> Cuando un sistema es opaco y no determinista, es dífícil reproducir errores o agregar nuevas características
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Context API*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ¿Qué hace? -> Evita hacer 'prop drilling' y podemos pasar las props de componentes padres a hijos de forma sencilla.
+- ¿Cuándo usarlo? -> Cuando usemos datos que no cambien mucho en nuestra aplicación.
+- Se puede usar desde la versión 16.3 de React
 
-### Code Splitting
+*Redux vs Context API*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Depuración -> Redux tiene un depurador que nos permite viajar en el tiempo. Context API es un poco más difícil.
+- Bundle size -> Context API ya viene integrado en React, así que es más ligero.
+- Middlewares -> Redux es muy sencillo con esto.
+- Curva aprendizaje -> Context API es mucho más fácil de entender. Redux es un nuevo paradigma.
+- Rendering -> Redux previene renders innecesarios.
 
-### Analyzing the Bundle Size
+## Introducción a nuestro proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Creemos una Pokedux
 
-### Making a Progressive Web App
+### Iniciando nuestro proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usaremos [Ant Design](https://ant.design/), una librería de UI de React.
