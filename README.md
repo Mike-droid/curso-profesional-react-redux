@@ -74,3 +74,10 @@ Usaremos [Ant Design](https://ant.design/), una librería de UI de React.
 ## Atraparlos ya
 
 ### Introducción a PokeAPI
+
+## React.js + Redux
+
+### Integrando Redux
+
+- `mapStateToProps` es una función recibe nuestro estado y retorna un objeto cuyas propiedades van a ser enviadas a las props del componente que se está conectado a redux.
+- `mapDispatchToProps` es una función que recibe el dispatcher de redux y retorna un objeto que será mapedo a las propiedades con los action creatrors
