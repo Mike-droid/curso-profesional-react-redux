@@ -3,16 +3,11 @@ import { StarOutlined } from '@ant-design/icons';
 import Meta from 'antd/lib/card/Meta';
 import './PokemonList.css';
 
-export const PokemonCard = () => {
+export const PokemonCard = ({ name, image }) => {
 	return (
 		<Card
-			title='Mewtwo'
-			cover={
-				<img
-					src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png'
-					alt='Mewtwo'
-				/>
-			}
+			title={name}
+			cover={<img src={image} alt={name} />}
 			extra={<StarOutlined />}
 		>
 			<Meta description='psychic' />

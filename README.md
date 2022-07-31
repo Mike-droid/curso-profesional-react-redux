@@ -70,3 +70,7 @@ Entrada: x -> Función Pura: f -> Salida: F(x)
 ### Iniciando nuestro proyecto
 
 Usaremos [Ant Design](https://ant.design/), una librería de UI de React.
+
+## Atraparlos ya
+
+### Introducción a PokeAPI
