@@ -96,3 +96,7 @@ useSelector vs Connect
 
 - useSelector -> `const list = useSelector(state => state.list);`
 - useDispatch -> `const dispatch = useDispatch(); dispatch(myAction());`
+
+### Redux DevTools
+
+[Redux DevTools](https://github.com/reduxjs/redux-devtools)
