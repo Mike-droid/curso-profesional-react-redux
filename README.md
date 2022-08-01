@@ -100,3 +100,17 @@ useSelector vs Connect
 ### Redux DevTools
 
 [Redux DevTools](https://github.com/reduxjs/redux-devtools)
+
+## Middlewares
+
+### Clase: Middlewares
+
+Un middleware es una pieza de código que se ejecuta entre que algo recibe un request y ese algo da respuesta al request.
+
+En el caso de Redux, esa pieza de código se ejecuta entre que se dispara una acción y esa acción llega al reducer.
+
+- store creator -> función que crea el store de redux
+- enhancer -> función de order superior que toma un store creator y devuelve una versión 'potenciada' (es similar a los middlewares)
+- compose -> utilidad de programación funcional que combina funciones de derecha a izquierda
+
+[sentry for react](https://sentry.io/for/react/)
