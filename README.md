@@ -81,3 +81,18 @@ Usaremos [Ant Design](https://ant.design/), una librería de UI de React.
 
 - `mapStateToProps` es una función recibe nuestro estado y retorna un objeto cuyas propiedades van a ser enviadas a las props del componente que se está conectado a redux.
 - `mapDispatchToProps` es una función que recibe el dispatcher de redux y retorna un objeto que será mapedo a las propiedades con los action creatrors
+
+### Hooks vs. Connect
+
+useSelector vs Connect
+
+- Boilerplate -> Los hooks ahorran mucho código aquí.
+- Separación de responsabilidades -> Connect hace un High Order Component, así que es mejor.
+- Testing -> Es un poco más fácil con Connect.
+
+> Redux ahora recomienda usar su Hooks API. - Redux Docs
+
+[Use the React-Redux Hooks API](https://redux.js.org/style-guide/#use-the-react-redux-hooks-api)
+
+- useSelector -> `const list = useSelector(state => state.list);`
+- useDispatch -> `const dispatch = useDispatch(); dispatch(myAction());`
