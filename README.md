@@ -116,3 +116,7 @@ En el caso de Redux, esa pieza de código se ejecuta entre que se dispara una ac
 [sentry for react](https://sentry.io/for/react/)
 
 ### Peticiones asíncronas
+
+### Redux Thunk
+
+[Understanding Asynchronous Redux Actions with Redux Thunk](https://www.digitalocean.com/community/tutorials/redux-redux-thunk)
