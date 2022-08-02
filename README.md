@@ -120,3 +120,9 @@ En el caso de Redux, esa pieza de código se ejecuta entre que se dispara una ac
 ### Redux Thunk
 
 [Understanding Asynchronous Redux Actions with Redux Thunk](https://www.digitalocean.com/community/tutorials/redux-redux-thunk)
+
+### Middlewares alternativos: Redux Saga
+
+[saga vs thunk](https://www.paradigmadigital.com/dev/sagas-vs-thunk/)
+
+[Redux Thunk vs Redux Saga - The Battle of the Middlewares](https://www.eternussolutions.com/2020/12/21/redux-thunk-redux-saga/)
