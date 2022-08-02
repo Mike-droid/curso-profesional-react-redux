@@ -8,6 +8,18 @@ export const getPokemons = async () => {
 		console.log(data.results);
 		return data.results;
 	} catch (error) {
-		console.error('There was an error: ', error);
+		console.error('There was an error with function getPokemons: ', error);
+	}
+};
+
+export const getPokemonDetails = async (pokemon) => {
+	try {
+		const { data } = await axios.get(pokemon.url);
+		return data;
+	} catch (error) {
+		console.error(
+			'There was an error with function getPokemonDetails: ',
+			error
+		);
 	}
 };

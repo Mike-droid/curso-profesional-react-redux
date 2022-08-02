@@ -114,3 +114,5 @@ En el caso de Redux, esa pieza de código se ejecuta entre que se dispara una ac
 - compose -> utilidad de programación funcional que combina funciones de derecha a izquierda
 
 [sentry for react](https://sentry.io/for/react/)
+
+### Peticiones asíncronas
