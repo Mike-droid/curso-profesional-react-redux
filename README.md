@@ -132,3 +132,7 @@ En el caso de Redux, esa pieza de código se ejecuta entre que se dispara una ac
 ### Agreguemos un loader
 
 Usaremos el componente de [Spin](https://ant.design/components/spin/)
+
+### Agreguemos favoritos
+
+[Ant Design - Card](https://ant.design/components/card/)
