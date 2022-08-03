@@ -20,7 +20,7 @@ Redux está basado en 3 principios:
 2. El estado es de solo lectura (solo se actualiza con actions). No debemos modificarlo directamente.
 3. Los cabmios deben realizarse a través de funciones puras (reducers).
 
-*Funciones puras*
+Funciones puras
 
 - Valor retornado cambia si la entrada cambia.
 - Misma entrada, misma salida.
@@ -28,7 +28,7 @@ Redux está basado en 3 principios:
 
 Entrada: x -> Función Pura: f -> Salida: F(x)
 
-*Reducers*
+Reducers
 
 - Calcular el nuevo estado basado en los parámetros (state, action).
 - No modificar el estado directamente.
@@ -49,13 +49,13 @@ Entrada: x -> Función Pura: f -> Salida: F(x)
 
 > Cuando un sistema es opaco y no determinista, es dífícil reproducir errores o agregar nuevas características
 
-*Context API*
+Context API
 
 - ¿Qué hace? -> Evita hacer 'prop drilling' y podemos pasar las props de componentes padres a hijos de forma sencilla.
 - ¿Cuándo usarlo? -> Cuando usemos datos que no cambien mucho en nuestra aplicación.
 - Se puede usar desde la versión 16.3 de React
 
-*Redux vs Context API*
+Redux vs Context API
 
 - Depuración -> Redux tiene un depurador que nos permite viajar en el tiempo. Context API es un poco más difícil.
 - Bundle size -> Context API ya viene integrado en React, así que es más ligero.
@@ -126,3 +126,9 @@ En el caso de Redux, esa pieza de código se ejecuta entre que se dispara una ac
 [saga vs thunk](https://www.paradigmadigital.com/dev/sagas-vs-thunk/)
 
 [Redux Thunk vs Redux Saga - The Battle of the Middlewares](https://www.eternussolutions.com/2020/12/21/redux-thunk-redux-saga/)
+
+## Avanzando la ui
+
+### Agreguemos un loader
+
+Usaremos el componente de [Spin](https://ant.design/components/spin/)
