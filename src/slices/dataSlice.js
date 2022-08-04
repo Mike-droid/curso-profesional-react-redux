@@ -1,8 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getPokemonDetails, getPokemons } from '../api/index';
+import { setLoading } from './uiSlice';
 
 const initialState = {
 	pokemons: [],
 };
+
+export const fetchPokemonWithDetails = createAsyncThunk(
+	'data/fetchPokemonWithDetails',
+	async (_, { dispatch }) => {
+		dispatch(setLoading(true));
+		const pokemonsRes = await getPokemons();
+		const pokemonDetails = await Promise.all(
+			pokemonsRes.map((pokemon) => getPokemonDetails(pokemon))
+		);
+		dispatch(setPokemons(pokemonDetails));
+		dispatch(setLoading(false));
+	}
+);
 
 const dataSlice = createSlice({
 	name: 'data',

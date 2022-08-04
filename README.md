@@ -186,3 +186,5 @@ Usaremos [redux-immutable](https://www.npmjs.com/package/redux-immutable)
 ### Redux Toolkit: creando nuestro primer Slice
 
 [Redux-toolkit](https://redux-toolkit.js.org/)
+
+### Redux Toolkit: createAsyncThunk
