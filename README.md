@@ -172,3 +172,5 @@ Pero la inmutabilidad también tiene desventajas:
 - Menos trazabilidad
 
 ### Agregando Inmutabilidad a nuestra Pokedux
+
+Instalamos [immutable](https://www.npmjs.com/package/immutable)
