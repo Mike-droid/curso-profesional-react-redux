@@ -136,3 +136,39 @@ Usaremos el componente de [Spin](https://ant.design/components/spin/)
 ### Agreguemos favoritos
 
 [Ant Design - Card](https://ant.design/components/card/)
+
+## Inmutabilidad
+
+### ¿Qué es inmutabilidad?
+
+> Algo que no puede ser cambiado después de su creación. - RAE
+
+Redux no rendirazá la UI si no hay cambios entre el estado inicial y el estado final.
+
+```javascript
+const updateAge = (userInfo) => {
+  return {
+    ...userInfo,
+    age: userInfo.age + 1,
+  };
+}
+
+const userInfo = {
+  name: 'Miguel',
+  age: 23,
+  email: 'miguel@platzi.com'
+}
+
+console.log('userInfo BEFORE: ', userInfo);
+console.log('userInfo AFTER: ', userInfo);
+console.log('updatedInfo: ', updateAge(userInfo));
+
+```
+
+Pero la inmutabilidad también tiene desventajas:
+
+- Generación constante de objetos
+- Propenso a errores humanos
+- Menos trazabilidad
+
+### Agregando Inmutabilidad a nuestra Pokedux
