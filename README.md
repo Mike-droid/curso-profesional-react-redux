@@ -174,3 +174,11 @@ Pero la inmutabilidad también tiene desventajas:
 ### Agregando Inmutabilidad a nuestra Pokedux
 
 Instalamos [immutable](https://www.npmjs.com/package/immutable)
+
+## Avanzado
+
+### Cuándo usar reducers combinados
+
+Combinar reducers es opcional y puede mejorar la experiencia de desarrollo. Sin embargo, eres libre de manejar todo con 1 solo reducer (aunque no es recomendable).
+
+Usaremos [redux-immutable](https://www.npmjs.com/package/redux-immutable)
