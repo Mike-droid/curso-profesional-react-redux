@@ -182,3 +182,7 @@ Instalamos [immutable](https://www.npmjs.com/package/immutable)
 Combinar reducers es opcional y puede mejorar la experiencia de desarrollo. Sin embargo, eres libre de manejar todo con 1 solo reducer (aunque no es recomendable).
 
 Usaremos [redux-immutable](https://www.npmjs.com/package/redux-immutable)
+
+### Redux Toolkit: creando nuestro primer Slice
+
+[Redux-toolkit](https://redux-toolkit.js.org/)
