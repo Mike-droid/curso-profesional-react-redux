@@ -188,3 +188,24 @@ Usaremos [redux-immutable](https://www.npmjs.com/package/redux-immutable)
 [Redux-toolkit](https://redux-toolkit.js.org/)
 
 ### Redux Toolkit: createAsyncThunk
+
+## Examen
+
+- Redux solo puede ser implementado con React.js: falso
+- Cuando usamos connect, al momento de testear nuestro componente: Podemos pasar los valores como props, ya que nuestro componente "no sabe" que existe Redux
+- Redux recomienda dejar de usar connect y usar en cambio useSelector: verdadero
+- Es necesario usar librerías como inmutable.js para trabajar la inmutabilidad en nuestros proyectos: falso
+- ¿Por qué es importante la inmutabilidad en Redux?: redux no indicará a la ui que renderice nuevamente
+- ¿Cuáles son los usos más comunes de Context?: datos que no cambian con frecuencia
+- Cuando usamos useSelector, al momento de testear nuestro componente: Debemos conectar nuestro componente a Redux en las pruebas
+- Redux Thunk tiene mucho menos boilerplate que Redux Saga: verdadero
+- ¿Qué es un Middleware con relación a Redux?: es una pieza de código que sucede entre se dispara una acción y el momento en que llega al reducer
+- Redux permite prevenir renderizados innecesarios: verdadero
+- La curva de aprendizaje de Context es más ligera que la de Redux: verdadero
+- ¿Cuáles son los principales aspectos que necesitamos de Redux en relación al estado?: dónde almacenarlo, un método para acceder aél y una manera de moficarlo
+- El principio de única fuente de verdad se refiere a que: el estado global de nuestra aplicación debe estar en un solo lugar: el store
+- ¿Cuáles son los 3 principios de Redux?: única fuente de verdad, el estado es de solo lectura, los cambios deben realizarse a través de funciones puras
+- Siempre es mejor usar Redux vs. React Context: falso, depende del caso
+- Es una característica de una función pura: para una entrada siempre va haber misma salida
+- El estado global de Redux: puede ser cualquier tipo aunque se recomienda clave-valor
+- Desde el componente se puede modificar directamente el estado global: falso
