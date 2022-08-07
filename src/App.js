@@ -13,6 +13,12 @@ function App() {
 
 	const loading = useSelector((state) => state.ui.loading);
 
+	const filterTerm = useSelector((state) => state.searchBar.filteredPokemon);
+
+	const allFilteredPokemon = pokemons.filter((pokemon) =>
+		pokemon.name.startsWith(filterTerm)
+	);
+
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -31,8 +37,10 @@ function App() {
 				<Col offset={12}>
 					<Spin spinning size='large' />
 				</Col>
+			) : allFilteredPokemon.length > 0 ? (
+				<PokemonList pokemons={allFilteredPokemon} />
 			) : (
-				pokemons && <PokemonList pokemons={pokemons} />
+				<PokemonList pokemons={pokemons} />
 			)}
 		</div>
 	);

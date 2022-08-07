@@ -2,7 +2,6 @@ export const logger = (store) => (next) => (action) => {
 	//* store -> the application's store
 	//* next -> we call this function when the middleware is done with its job
 	//* action goes to reducer
-	console.log('action ', action);
 	next(action);
 };
 
